@@ -116,6 +116,8 @@
     <Content Include="Sql\dbo.流程档案.data.sql" />
     <Content Include="Sql\1 数据结构.sql" />
     <Content Include="Sql\2 初始化数据.sql" />
+    <Content Include="Sql\logistics.sql" />
+    <Content Include="Sql\初始化sql.sql" />
     <Content Include="System\AgentCompanyDetail.js" />
     <Content Include="System\AgentCompanyList.js" />
     <Content Include="System\CommonPage\ErrorPage.aspx" />
@@ -377,6 +379,7 @@
     <Content Include="ListForm.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="LoginBootStrap.aspx" />
+    <Content Include="Sql\Logistics.cdm" />
     <None Include="System\Main.Master" />
     <Content Include="System\ActionDetail.js" />
     <Content Include="System\ActionList.js" />
