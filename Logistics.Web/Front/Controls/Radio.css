@@ -1,0 +1,40 @@
+﻿.fl {
+	float: left;
+	display: inline-block;
+}
+.myUI_form_input_box {
+    /*margin-left: 115px;*/
+    color: #666;
+    position: relative;
+    line-height: 27px;
+}
+/*表单样式*/
+.myUI_form_group {
+    clear: both;
+    font-size: 12px;
+    padding: 5px 0 4px 0;
+}
+
+
+.myUI-radioBox .ui-button.active {
+    border-color: #005baa;
+    background: url(/Front/Css/images/sundries_slice.png) right -198px;
+}
+
+.myUI-radioBox .ui-button {
+    padding: 0 10px;
+    height: 27px;
+    line-height: 27px;
+    border: 2px solid #cdcdcd;
+    background: #fff;
+    margin:0 5px 5px 0;
+    display: inline-block;
+    float: left;
+    cursor:pointer;
+    margin-top:3px;
+}
+div,a {outline: none !important;}
+
+
+.myUI-radioBox {float: left;}
+.myUI-radioBox input {display: none;}

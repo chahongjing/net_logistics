@@ -1,0 +1,25 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{padding:0px;margin:0px;}
+*{font-family:  "Microsoft YaHei","微软雅黑",Arial,simsun, Verdana,Helvetica, sans-serif; outline:none;}
+.mainBg{ background:url(/Front/Css/images/map.png) center 80px no-repeat; width:100%; height:100%;}
+.loginBg{ background:url(/Front/Css/images/loginBg_m.png);}
+.loginHead{ background:url(/Front/Css/images/login_sprite.png) repeat-x; height:50px; width:100%; overflow:hidden;margin:0px;padding:0px;}
+.loginHead .logoLogin{background:url(/Front/Css/images/login_sprite.png) no-repeat 0 -55px; height:45px; width:200px; display:inline-block; }
+.loginBody{ width:100%; height:auto;}
+.loginBody .loginForm{ width:385px; height:300px; margin:220px auto 0 auto; }
+.loginBody .loginForm h2{ color:#fff; font-size:24px; height:40px;}
+.loginBody .loginForm ul{ height:58px; background:#fff; margin-bottom:10px;}
+.loginBody .loginForm ul label{ width:63px; height:58px; float:left; background:#D4D4D4; margin-right:12px; position:relative;}
+.loginBody .loginForm ul label i{ position:absolute; width:25px; height:29px; display:inline-block; background:url(/Front/Css/images/login_sprite.png) no-repeat; }
+.loginBody .loginForm ul label.userName i{ background-position:-130px -134px;left:19px; top:16px;}
+.loginBody .loginForm ul label.passWord i{ background-position: -160px -134px;left:19px; top:13px;}
+.loginBody .loginForm ul input[type="text"],.loginBody .loginForm ul input[type="password"]{ border:0; height:40px; line-height:40px; margin-top:8px; font-size:18px; width:260px;float:left;}
+.loginBody .loginForm a.loginSubmit{ height:58px; width:385px; background:url(/Front/Css/images/login_sprite.png) 0 -220px repeat-x; display:inline-block; border-left:1px solid #006CB3;border-right:1px solid #006CB3; text-align:center; cursor:pointer;}
+.loginBody .loginForm a.loginSubmit i{ width:79px; height:29px; display:inline-block; background:url(/Front/Css/images/login_sprite.png) -100px -180px no-repeat; margin-top:15px;}
+.loginBody .loginForm a.loginSubmit:hover{ background-position:0 -279px;}
+i.showError_ico{ margin-top: 20px;}
+#formLogin .loginForm > ul{margin-left: 0px;padding-left:0px;}
+#formLogin .loginForm > ul > label{ cursor: pointer;}
+i.showError_ico,i.error{ width:16px; height:16px; display:inline-block; background: url(/Front/Css/images/icon_16.png) -100px -180px no-repeat ; float:left; margin:22px 0 0 7px; z-index:21; text-indent:-9999px;}

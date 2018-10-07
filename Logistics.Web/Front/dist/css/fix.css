@@ -1,0 +1,313 @@
+/* 
+	修订ACE样式
+*/
+
+body,button,input,select,textarea,h1,h2,h3,h4,h5,h6{font-family:Microsoft YaHei,'宋体',Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;}
+
+ul,li {
+	list-style: none;
+}
+
+.w_990 {
+	width: 990px;
+	margin: 0 auto;
+}
+
+.publicPaymentDiv {
+	width: 990px;
+	overflow-x: auto;
+	background: #fff;
+	position: relative;
+	margin-top: 40px;
+}
+
+/* 表格不换行 */
+.table-nowrap {
+	width: auto;
+	max-width: auto;
+}
+
+.table-nowrap th,.table-nowrap td {
+	white-space: nowrap;
+}
+
+/*表格悬浮出现小手*/
+.table-click {
+	cursor:pointer;
+}
+
+/* 对公付款 */
+.mainContent .nav-search {
+	left: 22px;
+}
+
+.mainContent .input-icon>.ace-icon {
+	right: 5px;
+	left: inherit;
+}
+
+.mainContent .input-icon>input {
+	padding-left: 6px;
+	padding-right: 24px;
+}
+
+.publicPaymentTable {
+	table-layout: fixed;
+}
+
+.advanceSearchBtn {
+	margin-left: 5px;
+}
+
+.advanceSearchBtn:hover {
+	text-decoration: none;
+}
+
+/*高级搜索*/
+.advanceSearch {
+	padding-top: 5px;
+	background: #fff;
+	position: relative;
+	display: none;
+}
+
+.advanceSearch ul {
+	clear: both;
+	list-style: none;
+	margin-bottom: 0px;
+	line-height: 30px;
+}
+
+.advanceSearch label {
+	width: 120px;
+	float: left;
+	text-align: right;
+	color: #909090;
+	margin: 3px 0px;
+}
+
+.advanceSearch label span {
+	margin: 0 10px;
+}
+
+.advanceSearch span.all {
+	float: left;
+	padding: 0px 15px 0px 6px;
+	margin: 2px 0;
+	color: #005baa;
+	cursor: pointer;
+}
+
+.advanceSearch li.custom {
+	margin-left: 73px;
+}
+
+.advanceSearch li a {
+	font-size: 14px;
+	display: inline-block;
+	padding: 0px 8px;
+	margin: 2px 4px 2px 0;
+	color: #454545;
+	text-decoration: none;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.advanceSearch li a.active,.advanceSearch li a:hover {
+	background: #5d9ceb;
+	color: #fff;
+}
+
+.searchChoosed {
+	padding: 0 5px 5px 0;
+	position: relative;
+	background: #fff;
+	margin-top: 10px;
+}
+
+.searchChoosed ul {
+	padding: 0;
+	line-height: 16px;
+	display: inline-block;
+	list-style: none;
+}
+
+.searchChoosed label {
+	width: 120px;
+	float: left;
+	text-align: right;
+	color: #909090;
+	line-height: 30px;
+}
+
+.searchChoosed li {
+	margin-left: 120px;
+	width: 690px;
+}
+
+.searchChoosed li dl {
+	display: inline-block;
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 5px;
+	margin-top: 5px;
+	padding: 0px 5px;
+	border: 1px solid #bebebe;
+	background: #fff;
+	color: #005BAA;
+	text-decoration: none;
+	cursor: default;
+	max-width: 390px;
+	margin-bottom: 5px;
+}
+
+.searchChoosed li dl:hover {
+	border: 1px solid #f16d46;
+}
+
+.searchChoosed li dl span {
+	float: left;
+	white-space: nowrap;
+	max-width: 300px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.searchChoosed li dl span.title {
+	color: #909090;
+}
+
+.searchChoosed li dl i,.advanceSerUL .custom dl i {
+	margin-left: 5px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.searchChoosed li dl i:hover {
+	background-position: 0 -117px;
+}
+
+.search_btns {
+	position: absolute;
+	width: 140px;
+	right: 0px;
+	bottom: 12px;
+}
+
+.search_btns a {
+	margin-left: 5px;
+}
+
+
+
+/*表格上方的控制栏*/
+.listBar {
+	height: 40px;
+	line-height: 40px;
+	width: 990px;
+	padding: 0px 20px;
+	position: absolute;
+	background: #fff;
+}
+
+.listBar ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.listBar ul li {
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-left: 10px;
+}
+
+.listBar a {
+	text-decoration: none;
+}
+
+.listBar .sortCondition {
+	margin-right: 10px;
+}
+
+.btnGroup a {
+	margin-left: 10px;
+}
+
+/*颜色值*/
+.fa.tip-success {
+	color: #b9fecf;
+}
+
+.fa.tip-error {
+	color: #fdcbcb;
+}
+
+table .tip-success {
+	background-color: #dbfee6;
+}
+
+table .tip-error {
+	background-color: #fddbdb;
+}
+
+table .tip-success.selected {
+	background-color: #55c578;
+	color:#fff;
+}
+
+table .tip-error.selected {
+	background-color: #e97d7d;
+	color:#fff;
+}
+
+.pageNav {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	width: 990px;
+	padding: 0px 20px;
+	position: absolute;
+}
+
+.pageNav .pagination {
+	margin: 4px 12px;
+}
+
+.pageNum {
+	float: left;
+}
+
+/*修正分页*/
+.pagination {
+	margin: 3px 0;
+	float: right;
+}
+
+/*弹出确认框*/
+.modal-sm .modal-header,.modal-sm .modal-footer {
+	padding: 5px 15px;
+}
+
+/*修正datepicker无法在modal中显示的问题*/
+.pickerInModal {
+	position: relative;
+	z-index: 9999;
+}
+
+.input-group-addon {
+	cursor: pointer;
+}
+
+/*修正验证样式*/
+.miniGroup.has-error input, .miniGroup.has-error select, .miniGroup.has-error textarea {
+	border-color: #f2a696;
+	color: #d68273;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.miniGroup.has-error .input-group .input-group-addon {
+	border-color: #f2a696;
+}

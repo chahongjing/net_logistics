@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title>导航</title>
+    <meta name="description" content="导航">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="/Front/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Front/dist/css/font-awesome.min.css">
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="/Front/dist/css/datepicker.min.css">
+    <link rel="stylesheet" href="/Front/dist/css/daterangepicker.min.css">
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/Front/dist/css/ace.min.css" class="ace-main-stylesheet"
+        id="main-ace-style">
+    <link rel="stylesheet" href="/Front/dist/css/fix.css">
+    <!--[if lte IE 9]>
+		  <link rel="stylesheet" href="/Front/dist/css/ace-ie.min.css" />
+		<![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+
+    <script src="/Front/dist/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+		<script src="/Front/dist/js/html5shiv.min.js"></script>
+		<script src="/Front/dist/js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+    <div id="navbar" class="navbar navbar-default    navbar-collapse       h-navbar">
+
+        <script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+        </script>
+
+        <div class="navbar-container w_990" id="navbar-container">
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand"><small><i class="fa fa-leaf"></i>费用系统 </small></a>
+            </div>
+            <nav role="navigation" class="navbar-menu pull-left collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						
+						<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								费用发放
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								费用申请
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								费用分摊
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								付款管理
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								其他
+							</a>
+						</li>
+
+						<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								参数配置
+							</a>
+						</li>
+					</ul>
+
+				</nav>
+        </div>
+        <!-- /.navbar-container -->
+    </div>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal" role="form">
+                        <div id="paymentInfo">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label no-padding-right" for="toCompany">
+                                    汇出公司
+                                </label>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="toCompany">
+                                        <option>万科</option>
+                                        <option>保利</option>
+                                        <option>恒大</option>
+                                        <option>大连万达</option>
+                                    </select>
+                                </div>
+                                <label class="col-md-2 control-label no-padding-right" for="toBank">
+                                    汇出银行
+                                </label>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="toBank">
+                                        <option>工商银行</option>
+                                        <option>招商银行</option>
+                                        <option>农业银行</option>
+                                        <option>建设银行</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label no-padding-right" for="planPayDate">
+                                    计划付款日期
+                                </label>
+                                <div class="col-md-4">
+                                    <div class="input-group pickerInModal">
+                                        <input type="text" placeholder="计划付款日期" class="date-picker input-sm form-control"
+                                            id="planPayDate" data-date-format="yyyy-mm-dd">
+                                        <span class="input-group-addon"><i class="fa fa-calendar bigger-110"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr hr-24">
+                        </div>
+                        <div id="invoiceInfo">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label no-padding-right" for="invoiceStatus">
+                                    发票状态
+                                </label>
+                                <div class="col-md-4">
+                                    <div class="radio col-sm-6 no-padding-left no-padding-right">
+                                        <label>
+                                            <input name="form-field-radio" type="radio" class="ace">
+                                            <span class="lbl">已提交 </span>
+                                        </label>
+                                    </div>
+                                    <div class="radio col-sm-6 no-padding-left no-padding-right">
+                                        <label>
+                                            <input name="form-field-radio" type="radio" class="ace">
+                                            <span class="lbl">未提交 </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label no-padding-right" for="invoiceType">
+                                    发票类型
+                                </label>
+                                <div class="col-md-4">
+                                    <select class="form-control" id="invoiceType">
+                                        <option>普通发票</option>
+                                        <option>增值税发票17%</option>
+                                        <option>增值税发票6%</option>
+                                        <option>增值税发票3%</option>
+                                        <option>其他增值税发票</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label no-padding-right" for="submitDate">
+                                    <font color="red">*</font>预计提交日期
+                                </label>
+                                <div class="col-md-4 miniGroup">
+                                    <div class="input-group pickerInModal">
+                                        <input type="text" placeholder="预计提交日期" class="date-picker input-sm form-control"
+                                            id="submitDate" name="submitDate" data-date-format="yyyy-mm-dd" required>
+                                        <span class="input-group-addon"><i class="fa fa-calendar bigger-110"></i></span>
+                                    </div>
+                                </div>
+                                <label class="col-md-2 control-label no-padding-right" for="chief">
+                                    <font color="red">*</font>责任人
+                                </label>
+                                <div class="col-md-4 miniGroup">
+                                    <div class="input-group">
+                                        <input type="text" id="chief" name="chief" placeholder="责任人" class="form-control"
+                                            required>
+                                        <span class="input-group-addon selectPeople"><i class="fa fa-search bigger-110"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-1 control-label no-padding-right" for="submitDate">
+                                    <font color="red">*</font>预计提交日期
+                                </label>
+                                <div class="col-md-2 miniGroup">
+                                    <div class="input-group pickerInModal">
+                                        <input type="text" placeholder="预计提交日期" class="date-picker input-sm form-control"
+                                            id="submitDate" name="submitDate" data-date-format="yyyy-mm-dd" required>
+                                        <span class="input-group-addon"><i class="fa fa-calendar bigger-110"></i></span>
+                                    </div>
+                                </div>
+                                <label class="col-md-1 control-label no-padding-right" for="chief">
+                                    <font color="red">*</font>责任人
+                                </label>
+                                <div class="col-md-2 miniGroup">
+                                    <div class="input-group">
+                                        <input type="text" id="chief" name="chief" placeholder="责任人" class="form-control"
+                                            required>
+                                        <span class="input-group-addon selectPeople"><i class="fa fa-search bigger-110"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <label class="col-md-1 control-label no-padding-right" for="chief">
+                                    <font color="red">*</font>责任人
+                                </label>
+                                <div class="col-md-2 miniGroup">
+                                    <div class="input-group">
+                                        <input type="text" id="chief" name="chief" placeholder="责任人" class="form-control"
+                                            required>
+                                        <span class="input-group-addon selectPeople"><i class="fa fa-search bigger-110"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <label class="col-md-1 control-label no-padding-right" for="chief">
+                                    <font color="red">*</font>责任人
+                                </label>
+                                <div class="col-md-2 miniGroup">
+                                    <div class="input-group">
+                                        <input type="text" id="chief" name="chief" placeholder="责任人" class="form-control"
+                                            required>
+                                        <span class="input-group-addon selectPeople"><i class="fa fa-search bigger-110"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-1 control-label no-padding-right" for="submitDate">
+                                    <font color="red">*</font>预计提交日期
+                                </label>
+                                <div class="col-md-3 miniGroup">
+                                    <div class="input-group pickerInModal">
+                                        <input type="text" placeholder="预计提交日期" class="date-picker input-sm form-control"
+                                            id="submitDate" name="submitDate" data-date-format="yyyy-mm-dd" required>
+                                        <span class="input-group-addon"><i class="fa fa-calendar bigger-110"></i></span>
+                                    </div>
+                                </div>
+                                <label class="col-md-1 control-label no-padding-right" for="chief">
+                                    <font color="red">*</font>责任人
+                                </label>
+                                <div class="col-md-3 miniGroup">
+                                    <div class="input-group">
+                                        <input type="text" id="chief" name="chief" placeholder="责任人" class="form-control"
+                                            required>
+                                        <span class="input-group-addon selectPeople"><i class="fa fa-search bigger-110"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <label class="col-md-1 control-label no-padding-right" for="chief">
+                                    <font color="red">*</font>责任人
+                                </label>
+                                <div class="col-md-3 miniGroup">
+                                    <div class="input-group">
+                                        <input type="text" id="chief" name="chief" placeholder="责任人" class="form-control"
+                                            required>
+                                        <span class="input-group-addon selectPeople"><i class="fa fa-search bigger-110"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2 no-padding-right" for="comment">
+                                    说明
+                                </label>
+                                <div class="col-md-10">
+                                    <textarea class="autosize-transition form-control" name="comment" id="comment"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- basic scripts -->
+    <!--[if !IE]> -->
+
+    <script src="/Front/dist/js/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+		<script src="/Front/dist/js/jquery/1.11.2/jquery.min.js"></script>
+		<![endif]-->
+    <!--[if !IE]> -->
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='/Front/dist/js/jquery.min.js'>" + "<" + "/script>");
+    </script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='/Front/dist/js/jquery1x.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='/Front/dist/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+
+    <script src="/Front/dist/js/bootstrap.js"></script>
+
+    <!-- page specific plugin scripts -->
+
+    <script src="/Front/dist/js/date-time/bootstrap-datepicker.min.js"></script>
+
+    <script src="/Front/dist/js/date-time/daterangepicker.min.js"></script>
+
+    <script src="/Front/dist/js/jquery.validate.min.js"></script>
+
+    <!-- ace scripts -->
+
+    <script src="/Front/dist/js/ace-elements.min.js"></script>
+
+    <script src="/Front/dist/js/ace.min.js"></script>
+
+    <script src="/Front/dist/js/tools.js"></script>
+
+    <script src="/Front/dist/js/AdvanceSearch.js"></script>
+
+    <!-- inline scripts related to this page -->
+
+    <script type="text/javascript">
+			jQuery(function($) {
+
+				//日期选择（搜索）
+				$('.date-picker-search').datepicker({
+					autoclose: true,
+					todayHighlight: true
+				}).on('changeDate',function(){
+					writeTimes(this);
+				});
+
+				//日期区间选择
+				$('.input-daterange').datepicker({autoclose:true});
+				
+				//日期选择
+				$('.date-picker').datepicker({
+					autoclose: true,
+					todayHighlight: true
+				}).on('changeDate',function(){
+					$('.form-horizontal').valid();
+				});
+				
+				//日期选择图标
+				$('.date-picker').next().on('click',function(){
+					if (!$(this).closest('.input-group').find('input').attr('disabled')) {
+						$(this).prev().focus();
+					}
+				});
+
+				//选择人员
+				$('.selectPeople').on('click',function(){
+					
+				});
+
+				//行单击选中
+				$('.publicPaymentTable tr').on('click', function(){
+
+					var _this = $(this);
+
+					_this.addClass('selected');
+					_this.siblings().removeClass('selected');
+
+					//选择已付款
+					if (_this.hasClass('tip-success')) {
+						$('#adjustPlan').html('<i class="fa fa-wrench"></i> 调整发票信息');
+						$('#adjustPlan').removeClass('hide');
+						$('#flagPayment').addClass('hide');
+					} else {
+						$('#adjustPlan').html('<i class="fa fa-wrench"></i> 调整付款计划');
+						$('#adjustPlan').removeClass('hide');
+						$('#flagPayment').removeClass('hide');
+					}
+				});
+
+				//弹出层打开处理逻辑
+				$('#payDetail').on('show.bs.modal', function () {
+
+					//判断当前选择是已付款还是未付款
+					if ($('.publicPaymentTable tr.selected').hasClass('tip-success')) {
+						$('#payDetail #paymentInfo').find('input').attr("disabled","disabled");
+						$('#payDetail #paymentInfo').find('select').attr("disabled","disabled");
+					} else {
+						$('#payDetail #paymentInfo').find('input').removeAttr("disabled");
+						$('#payDetail #paymentInfo').find('select').removeAttr("disabled");
+					}
+					
+				})
+				
+				//点击标记为已付款
+				$('#flagPayment').on('click', function(){
+					confirmModal('是否标记为已付款？',function(){
+						alert('确认');
+					},function(){
+						alert('取消');
+					});
+				});
+
+				//弹出框点击保存
+				$('#save').on('click', function(e){
+
+					//验证
+					if($('.form-horizontal').valid()) {
+						//提交
+	
+
+						//关闭Modal
+						$('#payDetail').modal('hide');
+					}
+
+				});
+
+				//验证
+				$('.form-horizontal').validate({
+					errorElement: 'div',
+					errorClass: 'help-block',
+					focusInvalid: false,
+					highlight: function (e) {
+						$(e).closest('.miniGroup').addClass('has-error');
+					},
+			
+					success: function (e) {
+						$(e).closest('.miniGroup').removeClass('has-error');
+						$(e).remove();
+					},
+			
+					errorPlacement: function (error, element) {
+						if(element.is('input[type=checkbox]') || element.is('input[type=radio]')) {
+							var controls = element.closest('div[class*="col-"]');
+							if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
+							else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+						}
+						else if(element.is('.select2')) {
+							error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+						}
+						else if(element.is('.chosen-select')) {
+							error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+						}
+						else error.insertAfter(element.parent());
+					},
+					//验证成功
+					submitHandler: function (form) {
+						
+						
+					},
+					//验证不成功
+					invalidHandler: function (form) {
+						
+					}
+				});
+
+				
+			});
+    </script>
+
+</body>
+</html>

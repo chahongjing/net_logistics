@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="/Front/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Front/dist/css/font-awesome.min.css">
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="/Front/dist/css/jquery-ui.custom.min.css">
+    <link rel="stylesheet" href="/Front/dist/css/chosen.min.css">
+    <link rel="stylesheet" href="/Front/dist/css/bootstrap-datetimepicker.min.css">
+    <link href="/Front/Controls/Radio.css" rel="stylesheet" type="text/css" />
+    <link href="/Front/Controls/DialogBox.css" rel="stylesheet" type="text/css" />
+    <!-- page specific plugin styles -->
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/Front/dist/css/ace.min.css" class="ace-main-stylesheet"
+        id="main-ace-style">
+    <link href="/Front/dist/css/ace-skins.min.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 9]>
+			<link rel="stylesheet" href="/Front/dist/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+    <!--[if lte IE 9]>
+		  <link rel="stylesheet" href="/Front/dist/css/ace-ie.min.css" />
+		<![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+
+    <script src="/Front/dist/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+		<script src="/Front/dist/js/html5shiv.min.js"></script>
+		<script src="/Front/dist/js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body class="no-skin">
+<div class="page-content">
+<form class="form-horizontal" role="form">
+    <div class="form-group has-error">
+        <label class="col-sm-2 control-label no-padding-right">
+            名称</label>
+        <div class="col-sm-4">
+            <input type="text" id="Text3" placeholder="名称" class="col-xs-10 col-sm-12">
+        </div>
+        <label class="col-sm-2 control-label no-padding-right">
+            路径</label>
+        <div class="col-sm-4">
+            <input type="text" id="Text5" placeholder="路径" class="col-xs-10 col-sm-12">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right">
+            父级</label>
+        <div class="col-sm-4">
+            <span class="input-icon input-icon-right" style="width: 100%">
+                <input type="text" id="Text1" class="" style="width: 100%" placeholder="父级">
+                <i class="ace-icon glyphicon glyphicon-search green" id="iParent"></i></span>
+        </div>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">
+            图标
+        </label>
+        <div class="col-sm-4">
+            <input type="text" id="Text2" placeholder="图标" class="col-xs-10 col-sm-12">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">
+            排序
+        </label>
+        <div class="col-sm-4">
+            <input type="text" id="Text4" placeholder="排序" class="col-xs-10 col-sm-12">
+        </div>
+        <label class="col-sm-2 control-label no-padding-right" for="form-field-1">
+            备注
+        </label>
+        <div class="col-sm-4">
+            <input type="text" id="Text8" placeholder="备注" class="col-xs-10 col-sm-12">
+        </div>
+    </div>
+    </form>
+    <input type="button" style="float:right;margin-bottom:0px;" value="提交" id="btnSubmit" />
+                        <button class="btn btn-primary"><i class="icon-beaker align-top bigger-100"></i>确定</button>
+    <div style="clear:both;height:0px;margin:0px;padding:0px;"></div>
+</div>
+</body>
+</html>
+<!--[if !IE]> -->
+
+<script src="/Front/dist/js/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- <![endif]-->
+<!--[if IE]>
+<script src="/Front/dist/js/jquery/1.11.2/jquery.min.js"></script>
+<![endif]-->
+<!--[if !IE]> -->
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='/Front/dist/js/jquery.min.js'>" + "<" + "/script>");
+</script>
+
+<!-- <![endif]-->
+<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='/Front/dist/js/jquery1x.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    if ('ontouchstart' in document.documentElement) document.write("<script src='/Front/dist/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+</script>
+
+<script src="/Front/dist/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+
+<script src="/Front/dist/js/jquery-ui.custom.min.js"></script>
+
+    <script src="/Front/dist/js/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="/Front/dist/js/chosen.jquery.min.js"></script>
+
+    <script src="/Front/dist/js/date-time\bootstrap-datepicker.min.js"></script>
+
+    <script src="/Front/dist/js/date-time\bootstrap-timepicker.min.js"></script>
+
+    <script src="/Front/dist/js/date-time\moment.min.js"></script>
+
+    <script src="/Front/dist/js/date-time\daterangepicker.min.js"></script>
+
+    <script src="/Front/dist/js/date-time\bootstrap-datetimepicker.min.js"></script>
+
+    <script src="/Front/dist/js/jquery.autosize.min.js"></script>
+
+    <script src="/Front/dist/js/jquery.inputlimiter.1.3.1.min.js"></script>
+
+    <script src="/Front/dist/js/jquery.maskedinput.min.js"></script>
+
+    <script src="/Front/dist/js/bootstrap-tag.min.js"></script>
+    <script src="../Front/Common/ToolSite.js" type="text/javascript"></script>
+
+    <script src="../Front/Controls/Radio.js" type="text/javascript"></script>
+    <script src="/Front/Controls/DialogBox.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        jQuery(function($) {
+            $('#id-disable-check').on('click', function() {
+                var inp = $('#form-input-readonly').get(0);
+                if (inp.hasAttribute('disabled')) {
+                    inp.setAttribute('readonly', 'true');
+                    inp.removeAttribute('disabled');
+                    inp.value = "This text field is readonly!";
+                }
+                else {
+                    inp.setAttribute('disabled', 'disabled');
+                    inp.removeAttribute('readonly');
+                    inp.value = "This text field is disabled!";
+                }
+            });
+
+
+            if (!ace.vars['touch']) {
+                $('.chosen-select').chosen({ allow_single_deselect: true });
+                //resize the chosen on window resize
+
+                $(window)
+					.off('resize.chosen')
+					.on('resize.chosen', function() {
+					    $('.chosen-select').each(function() {
+					        var $this = $(this);
+					        $this.next().css({ 'width': $this.parent().width() });
+					    })
+					}).trigger('resize.chosen');
+                //resize chosen on sidebar collapse/expand
+                $(document).on('settings.ace.chosen', function(e, event_name, event_val) {
+                    if (event_name != 'sidebar_collapsed') return;
+                    $('.chosen-select').each(function() {
+                        var $this = $(this);
+                        $this.next().css({ 'width': $this.parent().width() });
+                    })
+                });
+
+
+                $('#chosen-multiple-style .btn').on('click', function(e) {
+                    var target = $(this).find('input[type=radio]');
+                    var which = parseInt(target.val());
+                    if (which == 2) $('#form-field-select-4').addClass('tag-input-style');
+                    else $('#form-field-select-4').removeClass('tag-input-style');
+                });
+            }
+
+
+            $('#date-timepicker2').datetimepicker({ format: "YYYY-MM-DD HH:mm:ss" }).next().on(ace.click_event, function() {
+                $(this).prev().focus();
+            });
+
+            $('.ace-file-input').closest('.file-input-container:not(:first-child)').remove();
+            $('input[type=file]').ace_file_input('reset_input');
+
+            //file input
+            $('input[type=file]').ace_file_input()
+					.closest('.ace-file-input')
+					.addClass('width-90 inline')
+					.wrap('<div class="form-group file-input-container"><div class="col-sm-7"></div></div>');
+
+            //Add Attachment
+            //the button to add a new file input
+            $('#id-add-attachment')
+					.on('click', function() {
+					    var file = $('<input type="file" name="attachment[]" />').appendTo('#form-attachments');
+					    file.ace_file_input();
+
+					    file.closest('.ace-file-input')
+						.addClass('width-90 inline')
+						.wrap('<div class="form-group file-input-container"><div class="col-sm-7"></div></div>')
+						.parent().append('<div class="action-buttons pull-right col-xs-1">\
+							<a href="#" data-action="delete" class="middle">\
+								<i class="ace-icon fa fa-trash-o red bigger-130 middle"></i>\
+							</a>\
+						</div>')
+						.find('a[data-action=delete]').on('click', function(e) {
+						    //the button that removes the newly inserted file input
+						    e.preventDefault();
+						    $(this).closest('.file-input-container').hide(300, function() { $(this).remove() });
+						});
+					});
+
+            $('#id-message-form').on('reset', function() {
+                $('.message-form .message-body').empty();
+
+                $('.message-form .ace-file-input:not(:first-child)').remove();
+                $('.message-form input[type=file]').ace_file_input('reset_input_ui');
+
+                var val = tag_input.data('value');
+                tag_input.parent().find('.tag').remove();
+                $(val.split(',')).each(function(k, v) {
+                    tag_input.before('<span class="tag">' + v + '<button class="close" type="button">&times;</button></span>');
+                });
+            });
+        });
+    </script>
+<!-- ace scripts -->
+
+<script src="/Front/dist/js/ace-elements.min.js"></script>
+
+<script src="/Front/dist/js/ace.min.js"></script>
+<script src="/Front/Common/ToolSite.js"></script>
+
+<script type="text/javascript">
+    $("#btnSubmit").click(function() {
+        DialogBox.closeDialog({ status: "Close", data: "asdf" });
+    });
+
+    $("#iParent").click(function() {
+        DialogBox.showDialog({ title: "选择一级分类", url: "/System/NavigationEdit.aspx", width: 900, height: 235, closing: function(data) { alert(data); } });
+    });
+</script>
+
