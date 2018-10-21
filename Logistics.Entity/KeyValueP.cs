@@ -47,7 +47,7 @@ namespace Logistics.Entity
         /// <summary>
         /// 分组
         /// </summary>
-        [DataColumn]
+        [DataColumn("[Group]")]
         public string Group { get; set; }
         /// <summary>
         /// 父级主键
